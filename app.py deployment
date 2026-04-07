@@ -1,0 +1,10 @@
+uvx --from google-adk==1.14.0 \
+adk deploy cloud_run \
+  --project=$PROJECT_ID \
+  --region=europe-west1 \
+  --service_name=ai-studyplanner-agent \
+  --with_ui \
+  . \
+  -- \
+  --labels=project=study-planner \
+  --service-account=$SERVICE_ACCOUNT
